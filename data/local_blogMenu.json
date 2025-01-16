@@ -1,0 +1,14 @@
+[
+    {
+        "name": "about.md",
+        "download_url": "/menu/about.md"
+    },
+    {
+        "name": "projects.md",
+        "download_url": "/menu/projects.md"
+    },
+    {
+        "name": "contact.md",
+        "download_url": "/menu/contact.md"
+    }
+]
