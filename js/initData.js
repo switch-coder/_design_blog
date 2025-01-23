@@ -77,7 +77,7 @@ async function initDataBlogMenu() {
         return blogMenu;
     }
 
-    if (!isLocal) {
+    if (isLocal) {
         // 로컬환경
         const response = await fetch(
             url.origin + "/data/local_blogMenu.json"
