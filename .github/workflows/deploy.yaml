@@ -21,6 +21,11 @@ jobs:
         with:
           node-version: '16' # 필요한 Node.js 버전
 
+      - name: Print current directory and files
+        run: |
+          pwd
+          ls -R
+
       # 3. getMenu.js 실행
       - name: Run getMenu.js
         run: node ./getMenu.js
