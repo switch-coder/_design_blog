@@ -72,5 +72,10 @@
       }
     ],
     "download_url": "/menu/projects"
+  },
+  {
+    "type": "file",
+    "name": "testme.md",
+    "download_url": "/menu/testme.md"
   }
 ]
