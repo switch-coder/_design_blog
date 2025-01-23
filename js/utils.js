@@ -46,7 +46,7 @@ function extractFileInfo(filename) {
 
   // 정규 표현식을 사용하여 날짜, 제목, 카테고리, 썸네일, 저자 정보 추출
   const regex =
-    /^\[(\d{8})\]_\[(.*?)\]_\[(.*?)\]_\[(.*?)\]_\[(.*?)\]_\[(.*?)\].(md|ipynb)$/;
+    /^\[(\d{8})\]_\[(.*?)\]_\[(.*?)\]_\[(.*?)\]_\[(.*?)\]_\[(.*?)\].(md)$/;
   const matches = filename.match(regex);
   // console.log(`extractFileInfo: ${matches}`);
 

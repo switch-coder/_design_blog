@@ -1,3 +1,5 @@
+
+
 function styleMarkdown(kinds, text, title_info = null) {
   /* 
     메뉴와 블로그 상세 목록을 globalStyle.js에 정의된 tailwind css로 스타일링 합니다. 
@@ -6,7 +8,6 @@ function styleMarkdown(kinds, text, title_info = null) {
   const stylePlugin = {
     renderer: {
       image({ text, href, title }) {
-        console.log('text :>> ', text);
 
         
         // text가 undefined일 경우 빈 문자열로 처리
@@ -18,7 +19,6 @@ function styleMarkdown(kinds, text, title_info = null) {
   
         // 텍스트에서 {style=...} 제거
         const cleanText = altText.replace(/\{style="[^"]+"\}/, '').trim();
-        console.log('style :>> ', style);
         // 이미지 태그 생성
         return `<img src="${href}" alt="${cleanText}" style="${style}" />`;
       }
@@ -74,32 +74,7 @@ function styleMarkdown(kinds, text, title_info = null) {
     .forEach((blockquote) =>
       blockquote.classList.add(...postblockquoteStyle.split(" "))
     );
-  tempDiv.querySelectorAll("pre").forEach((pre) => {
-    pre.classList.add(...postpreStyle.split(" "));
 
-    const code = pre.textContent;
-
-    // 복사 버튼 생성
-    const copyButton = document.createElement("button");
-    copyButton.innerHTML = '<span class="sr-only">코드 복사하기</span>';
-    copyButton.classList.add(...notebookcopyButtonStyle.split(" "));
-    copyButton.setAttribute("id", "copy-button");
-
-    // 복사 버튼 클릭 이벤트, pre에 텍스트가 있는 경우에만 활성화
-    copyButton.addEventListener("click", async function (event) {
-      event.stopPropagation(); // 이벤트 버블링을 막습니다.
-      try {
-        await navigator.clipboard.writeText(code);
-        alert("복사되었습니다");
-      } catch (err) {
-        console.error("Failed to copy text: ", err);
-        alert("복사에 실패했습니다.");
-      }
-    });
-
-    // pre 요소 안에 버튼 삽입
-    pre.appendChild(copyButton);
-  });
   tempDiv
     .querySelectorAll("code")
     .forEach((code) => code.classList.add(...postcodeStyle.split(" ")));

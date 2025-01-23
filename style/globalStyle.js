@@ -13,7 +13,7 @@ const posth5Style = `text-lg font-bold`;
 const posth6Style = `text-sm mb-2 -mt-4`;
 
 const postpStyle = `font-normal tracking-wide`;
-const postimgStyle = `w-full rounded mx-auto block max-w-full h-auto align-middle`;
+const postimgStyle = `w-full mx-auto block max-w-full h-auto align-middle`;
 const postaStyle = `text-primary underline hover:bg-activation transition duration-200`;
 
 const postulStyle = `list-disc list-inside font-normal tracking-wide text-justify`;
