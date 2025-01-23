@@ -77,13 +77,12 @@ async function initDataBlogMenu() {
         return blogMenu;
     }
 
-    if (isLocal) {
+    if (!isLocal) {
         // 로컬환경
         const response = await fetch(
             url.origin + "/data/local_blogMenu.json"
         );
         blogMenu = await response.json();
-        console.log('initData blogMenu :>> ', blogMenu);
     } else {
         // GitHub 배포 상태
         // 만약 siteConfig.username이 비어있거나 siteConfig.repositoryName이 비어 있다면 해당 값을 지정하여 시작
@@ -96,19 +95,29 @@ async function initDataBlogMenu() {
         }
 
         let response;
-
-        // 배포 상태에서 GitHub API를 사용(이용자가 적을 때)
+        if (!localDataUsing) {
+             // 배포 상태에서 GitHub API를 사용(이용자가 적을 때)
         const path = `https://api.github.com/repos/${siteConfig.username}/${siteConfig.repositoryName}/contents/menu`
-            response = await fetch(
-                path
-            );
-        let list = await response.json();
-        blogMenu =await list.map(async l => {
-            if (l.type === "dir") {
-                response = await fetch(`${path}/${l.name}`)
-                l.children = await response.json();
-                return l;
-        }else return l })
+        response = await fetch(
+            path
+        );
+    let list = await response.json();
+    blogMenu =await Promise.all(list.map(async l => {
+        if (l.type === "dir") {
+            response = await fetch(`${path}/${l.name}`)
+            l.children = await response.json();
+            return l;
+        } else return l
+    }))
+        }
+       else
+{
+        response = await fetch(
+           `https://switch-coder.github.io/${siteConfig.repositoryName}/data/local_blogMenu.json`
+        );
+        blogMenu = await response.json();
+
+      }
     }
     return blogMenu;
 }
