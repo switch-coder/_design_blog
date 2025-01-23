@@ -105,7 +105,7 @@ async function initDataBlogMenu() {
         let list = await response.json();
         blogMenu =await list.map(async l => {
             if (l.type === "dir") {
-                response = await fetch(path + l.name)
+                response = await fetch(`${path}/${l.name}`)
                 l.children = await response.json();
                 return l;
         }else return l })
