@@ -97,6 +97,7 @@ async function renderMenu() {
   if (snsList.length > 0) { 
     const br = document.createElement("hr");
 
+    br.classList.add(...["mx-4" ,'md:mx-8'])
     document.getElementById("menu").appendChild(br);
 
   }
@@ -192,21 +193,13 @@ function createCardElement(fileInfo, index) {
     정규표현식으로 파싱된 파일정보 fileInfo를 기반으로 blog의 card 생성, index를 받는 이유는 첫번째 카드는 넓이를 크게 차지해야 하기 때문
     */
   const card = document.createElement("div");
-  if (index === 0) {
-    card.classList.add(...bloglistFirstCardStyle.split(" "));
-  } else {
-    card.classList.add(...bloglistCardStyle.split(" "));
-  }
+  card.classList.add(...bloglistCardStyle.split(" "));
 
   if (fileInfo.thumbnail) {
     const img = document.createElement("img");
     img.src = fileInfo.thumbnail;
     img.alt = fileInfo.title;
-    if (index === 0) {
-      img.classList.add(...bloglistMainContentStyle.split(" "));
-    } else {
       img.classList.add(...bloglistCardImgStyle.split(" "));
-    }
     card.appendChild(img);
   }
 
@@ -228,11 +221,8 @@ function createCardElement(fileInfo, index) {
   cardBody.appendChild(title);
 
   const description = document.createElement("p");
-  if (index == 0) {
-    description.classList.add(...bloglistCardDescriptionStyle.split(" "));
-  } else {
-    description.classList.add(...bloglistCardDescriptionStyle.split(" "));
-  }
+
+  description.classList.add(...bloglistCardDescriptionStyle.split(" "));
   description.textContent = fileInfo.description;
   const dot = document.createElement("span")
   dot.classList.add(...bloglistCardCategoryStyle.split(" "));
@@ -671,10 +661,7 @@ async function initialize() {
     renderMenu();
     // 블로그 리스트 로딩
     await initDataBlogList();
-    console.log('blogMenu :>> ', blogMenu, url.search.split("=")[1]);
-    const folder = blogMenu.find(b => b.name == url.search.split("=")[1])
-    console.log('folder :>> ', folder);
-
+    const folder = blogMenu.find(b => b.name.toLowerCase() == url.search.split("=")[1].toLowerCase())
     renderBlogList(folder.children);
 
     // 블로그 카테고리 로딩

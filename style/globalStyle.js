@@ -54,7 +54,7 @@ const notebookdownloadButtonStyle = `download-button px-5 py-[11px] mb-4 text-sm
 
 // bloglist 목록 스타일
 const bloglistMainContentStyle = `relative mainContent md:h-auto h-screen object-cover object-center overflow-hidden top-0 left-0 aspect-video`;
-const bloglistFirstCardStyle = `h-full bg-white transition duration-200 ease-in-out transform hover:-translate-y-1 flex-col flex-1 cursor-pointer z-10 justify-end`;
+const bloglistFirstCardStyle = `h-full bg-white transition duration-200 ease-in-out transform hover:-translate-y-1 flex-col flex-1 cursor-pointer justify-end`;
 const bloglistFirstCardImgStyle = `w-full  object-cover object-center overflow-hidden md:h-auto aspect shrink-0 mr-8`;
 const bloglistFirstCardDescriptionStyle = `text-graylv4 text-base font-normal leading-snug md:max-h-40 md:line-clamp-[7] line-clamp-3 mb-3`;
 
@@ -74,7 +74,7 @@ const bloglistCardDateStyle = `text-graylv3 text-sm inline-block font-normal`;
 const searchInputStyle = `absolute top-20 right-8 w-[220px] h-10 rounded-md border border-gray-300 pl-2 text-base font-bold text-gray-600 outline-none box-border transition duration-300 ease-in-out shadow-none bg-white bg-clip-padding`;
 
 // category 스타일
-const categoryContainerStyle = `hidden flex-col md:w-[220px] overflow-y-auto rounded-md bg-white shadow-sm z-10`;
+const categoryContainerStyle = `hidden flex-col md:w-[220px] overflow-y-auto rounded-md bg-white shadow-sm`;
 const categoryItemStyle = `text-base font-normal px-5 py-[9px] cursor-pointer hover:bg-graylv1 transition duration-200 ease-in-out`;
 const categoryItemCountStyle = `text-base font-normal text-graylv3 ml-1`;
 

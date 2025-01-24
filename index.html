@@ -94,9 +94,9 @@
     </style>
   </head>
   <body class="w-full text-surface flex flex-col md:flex-row">
-    <header class="w-full bg-white/40 mx-auto backdrop-blur max-w-xs">
+    <header class="w-full bg-white/40 mx-auto backdrop-blur md:max-w-xs">
       <nav
-        class="flex flex-col container min-w-64 max-w-full mx-auto p-1 py-4 md:p-8 relative sticky !top-0"
+        class="flex flex-col container min-w-64 max-w-full mx-auto p-4 md:p-8 relative sticky !top-0"
       >
         <!-- 블로그 제목 영역 --> <div class="flex justify-between">
 
@@ -112,7 +112,7 @@
             </button>
         </div>
       </div>
-      <hr />
+      <hr class="" />
         <!-- 메뉴 아이템들 --> <div id="menu" class="flex flex-col hidden md:flex">
         </div>
       </nav>
@@ -122,10 +122,10 @@
         class="absolute bg-white/95 backdrop-blur w-full max-w-media z-10 md:hidden"
       ></div>   <!-- // 모바일에서 메뉴 영역이 보이도록 하는 영역 -->
     </header>
-    <main class="container md:p-8 md:px-12 w-full mx-auto max-w-media overflow-x-hidden ">
+    <main class="container md:p-8 md:px-12 w-full mx-auto max-w-media overflow-x-hidden z-[-1]">
       <!-- 블로그 포스트 리스트 영역 --><div 
         id="blog-posts"
-        class="grid md:grid-cols-3 lg:grid-cols-3 gap-x-2 lg:gap-y-10 gap-y-4 mb-20 max-w-[760px] m-auto"
+        class="grid md:grid-cols-3 lg:grid-cols-3 gap-x-2 lg:gap-y-10 gap-y-4 mb-20 max-w-[760px] m-auto px-4"
       ></div>
          <!-- // contents 영역--><div
         id="contents"

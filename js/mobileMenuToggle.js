@@ -23,23 +23,24 @@ window.addEventListener("click", (event) => {
         }
     } else if (event.target.parentNode === mobileMenu) {
         event.preventDefault();
-
-        if (event.target.innerText + ".md" === "projects.md") {
+        const target = event.target.innerText
+        const folder = blogMenu.find(b => b.name.split('.')[0].toLowerCase() == target.toLowerCase())
+        if (folder.type === "dir") {
             if (blogList.length === 0) {
                 // 블로그 리스트 로딩
                 initDataBlogList().then(() => {
-                    renderBlogList();
+                    renderBlogList(folder.children);
                 });
             } else {
-                renderBlogList();
+                renderBlogList(folder.children);
             }
             // console.log(origin)
             const url = new URL(origin);
-            url.searchParams.set("menu", event.target.innerText + ".md");
+            url.searchParams.set("menu", event.target.innerText);
             window.history.pushState({}, "", url);
             mobileMenu.innerHTML = "";
         } else {
-            renderOtherContents(event.target.innerText + ".md");
+            renderOtherContents(folder.name);
             mobileMenu.innerHTML = "";
         }
     } else {
