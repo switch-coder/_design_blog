@@ -84,6 +84,7 @@ async function renderMenu() {
           renderBlogList(menu.children);
         }
         const url = new URL(origin);
+
         url.searchParams.set("menu", menu.name);
         window.history.pushState({}, "", url);
       } else {
@@ -324,7 +325,7 @@ function renderBlogList(list,searchResult = null, currentPage = 1) {
     const endIndex = currentPage * pageUnit;
 
     // console.log("blogList", blogList);
-    list.slice(startIndex, endIndex).forEach((post, index) => {
+  list.slice(startIndex, endIndex).forEach((post, index) => {
       const postInfo = extractFileInfo(post.name);
       if (postInfo) {
         // console.log(postInfo)
@@ -356,6 +357,8 @@ function renderBlogList(list,searchResult = null, currentPage = 1) {
                 // 렌더링 후에는 URL 변경(query string으로 블로그 포스트 이름 추가)
                 const url = new URL(origin);
                 url.searchParams.set("post", post.name);
+                url.searchParams.set('folder',post.folder)
+
                 window.history.pushState({}, "", url);
               });
           } catch (error) {
@@ -635,7 +638,6 @@ async function initialize() {
     T: URL 파싱 결과 상세 블로그나 메뉴상태이면 검색 버튼을 누르기 전까지는 initDataBlogList()를 실행시킬 필요 없음. 이를 통해 API 호출 한 번을 아낄 수 있음.
     */
   if (!url.search.split("=")[1]) {
-
     document.getElementById("blog-posts").style.display = "none";
     document.getElementById("contents").style.display = "block";
 
@@ -647,7 +649,6 @@ async function initialize() {
     .then((response) => response.text())
     .then((text) => styleMarkdown("menu", text))
   } else if (url.search.split("=")[1] && !url.search.split("=")[1].includes('.md')) {
-    console.log('hi :>> ',);
     
     // 메뉴 로딩
     await initDataBlogMenu();

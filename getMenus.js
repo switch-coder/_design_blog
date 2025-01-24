@@ -21,7 +21,8 @@ function getFolderStructure(dirPath, parentPath) {
       structure.push({
         type: 'file',
         name: item,
-        download_url: parentPath ?  '/menu/'+parentPath+item : '/menu/'+item
+        download_url: parentPath ? '/menu/' + parentPath + item : '/menu/' + item,
+        folder : parentPath
       });
     }
   });

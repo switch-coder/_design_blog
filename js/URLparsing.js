@@ -76,28 +76,34 @@ if (isLocal) {
 // 브라우저의 뒤로가기/앞으로가기 버튼 처리
 window.addEventListener("popstate", (event) => {
   // 뒤로 가는 것은 3가지 케이스가 있을 수 있음
+  // 포스트 일때
+  // 그냥 메뉴 일때
+  // 폴더 일때
+  // 메인 화면 일때
   // 1. 뒤로 갔을 때 메인 페이지(/), 뒤로 갔을 때 블로그 리스트 페이지(/?menu=projects.md) (실제로는 동일)
   // 2. 뒤로 갔을 때 menu 페이지(/?menu=about.md)
   // 3. 뒤로 갔을 때 post 페이지(/?post=20210601_[제목]_[카테고리]_[썸네일]_[저자].md)
 
   // 렌더링이 이미 된 것은 category, init, blogList, blogMenu
-
   // 뒤로간 url을 가져옴
   let url = new URL(window.location.href);
-
-  if (!url.search.split("=")[1] || url.search.split("=")[1] === "projects.md") {
+  if (!url.search.split("=")[1]) {
+        document.getElementById("blog-posts").style.display = "none";
+    document.getElementById("contents").style.display = "block"
+    fetch(origin + "menu/about.md")
+    .then((response) => response.text())
+    .then((text) => styleMarkdown("menu", text))
+  }else if ( !url.search.split("=")[1].includes('.md')) {
     // 블로그 리스트 로딩
-    renderBlogList();
+    const folder = blogMenu.find(bm => bm.name.toLowerCase() === url.search.split("=")[1].toLowerCase())
+    renderBlogList(folder.children);
   } else if (url.search.split("=")[0] === "?menu") {
     // 메뉴 상세 정보 로딩
-    // console.log('menu', url.search.split("=")[1])
     document.getElementById("blog-posts").style.display = "none";
-    document.getElementById("contents").style.display = "block";
-    // console.log(origin + "menu/" + url.search.split("=")[1])
+    document.getElementById("contents").style.display = "block"
     fetch(origin + "menu/" + url.search.split("=")[1])
       .then((response) => response.text())
       .then((text) => {
-        // console.log(text)
         styleMarkdown("menu", text);
       });
   } else if (url.search.split("=")[0] === "?post") {
@@ -111,10 +117,13 @@ window.addEventListener("popstate", (event) => {
     } else if (url.search.split("=")[0] === "?post") {
       document.getElementById("contents").style.display = "block";
       document.getElementById("blog-posts").style.display = "none";
-      postNameDecode = decodeURI(url.search.split("=")[1]).replaceAll("+", " ");
-      // console.log(postNameDecode);
+      const params = new URLSearchParams(window.location.search);
+      const post = params.get("post"); // "John"
+      const folder = params.get("folder");   // "30"
+      postNameDecode = post// decodeURI(url.search.split("=")[1]).replaceAll("+", " ");
       postInfo = extractFileInfo(postNameDecode);
-      fetch(origin + "blog/" + postNameDecode)
+      const link = folder ? `${origin}menu/${folder}${postNameDecode} `: `${origin}menu/${postNameDecode}`
+      fetch(link)
         .then((response) => response.text())
         .then((text) =>
           postInfo.fileType === "md"
