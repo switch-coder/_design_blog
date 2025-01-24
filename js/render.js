@@ -389,9 +389,7 @@ function renderOtherContents(menu) {
   // console.log(menu)
   // console.log(menu.download_url)
   let menuDownloadUrl;
-  console.log('${siteConfig.repositoryName} :>> ', siteConfig.repositoryName);
-  if (isLocal && localDataUsing) {
-    console.log('${siteConfig.repositoryName} 2:>> ', siteConfig.repositoryName,`${url.origin}/${siteConfig.repositoryName}${menu.download_url}`);
+  if (!isLocal && localDataUsing) {
     menuDownloadUrl =`${url.origin}/${siteConfig.repositoryName}${menu.download_url}`;
   } else {
     menuDownloadUrl = menu.download_url;
