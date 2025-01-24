@@ -1,5 +1,5 @@
 :root {
-  --half-mx: calc(50vw - 20rem);
+  --half-mx: 50vw;
   font-family: Pretendard,  "Inter";
   font-size: 0.938rem;
 }
@@ -45,6 +45,13 @@ h6 {
   }
 }
 
+@media (min-width: 640px)  {
+  :root {
+    --half-mx: calc(50vw - 20rem);
+  }
+}
+
+
 
 .slider { 
   margin-inline: calc(-1* var(--half-mx));
@@ -60,6 +67,13 @@ h6 {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
 }
+
+@media (max-width: 640px) {
+  .slider {
+    height: 300px !important;
+   }
+}
+
 
 .slider > p {
   flex-shrink: 0;
