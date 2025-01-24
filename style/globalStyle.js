@@ -58,10 +58,10 @@ const bloglistFirstCardStyle = `h-full bg-white transition duration-200 ease-in-
 const bloglistFirstCardImgStyle = `w-full  object-cover object-center overflow-hidden md:h-auto aspect shrink-0 mr-8`;
 const bloglistFirstCardDescriptionStyle = `text-graylv4 text-base font-normal leading-snug md:max-h-40 md:line-clamp-[7] line-clamp-3 mb-3`;
 
-const bloglistCardStyle = `relative overflow-hidden bg-white transition duration-200 ease-in-out transform hover:-translate-y-1 cursor-poitner col-span-1 w-auto cursor-pointer`;
+const bloglistCardStyle = `overflow-hidden bg-white transition duration-200 ease-in-out hover:-translate-y-1 cursor-poitner col-span-1 w-auto cursor-pointer`;
 const bloglistCardImgStyle = `w-full aspect-video object-cover object-center overflow-hidden`;
 
-const bloglistCardBodyStyle = `h-full w-full relative opacity-100 duration-300 bottom-0`;
+const bloglistCardBodyStyle = `h-full w-full opacity-100 duration-300 bottom-0`;
 const bloglistCardTitleStyle = `font-bold text-base my-2`;
 const bloglistCardCategoryStyle = `inline-block text-primary md:text-sm font-medium mx-2`;
 const bloglistCardDescriptionStyle = `text-graylv4 text-sm font-normal leading-snug h-16 line-clamp-3 mb-3`;

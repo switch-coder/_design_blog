@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function getFolderStructure(dirPath) {
+function getFolderStructure(dirPath, parentPath) {
   const items = fs.readdirSync(dirPath);
   const structure = [];
 
@@ -13,7 +13,7 @@ function getFolderStructure(dirPath) {
       structure.push({
         type: 'dir',
         name: item,
-        children: getFolderStructure(fullPath), // 재귀 호출
+        children: getFolderStructure(fullPath,item+'/'), // 재귀 호출
         download_url: '/menu/'+item
 
       });
@@ -21,7 +21,7 @@ function getFolderStructure(dirPath) {
       structure.push({
         type: 'file',
         name: item,
-        download_url: '/menu/'+item
+        download_url: parentPath ?  '/menu/'+parentPath+item : '/menu/'+item
       });
     }
   });

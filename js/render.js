@@ -386,8 +386,6 @@ function renderOtherContents(menu) {
       name: menu.split("/")[menu.split("/").length - 1],
     };
   }
-  // console.log(menu)
-  // console.log(menu.download_url)
   let menuDownloadUrl;
   if (!isLocal && localDataUsing) {
     menuDownloadUrl =`${url.origin}/${siteConfig.repositoryName}${menu.download_url}`;
@@ -637,7 +635,6 @@ async function initialize() {
     T: URL 파싱 결과 상세 블로그나 메뉴상태이면 검색 버튼을 누르기 전까지는 initDataBlogList()를 실행시킬 필요 없음. 이를 통해 API 호출 한 번을 아낄 수 있음.
     */
   if (!url.search.split("=")[1]) {
-    console.log('hi :>> ',);
 
     document.getElementById("blog-posts").style.display = "none";
     document.getElementById("contents").style.display = "block";
