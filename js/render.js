@@ -97,7 +97,7 @@ async function renderMenu() {
   if (snsList.length > 0) { 
     const br = document.createElement("hr");
 
-    br.classList.add(...["mx-4" ,'md:mx-8'])
+    br.classList.add(...["mx-4" ,'md:mx-0'])
     document.getElementById("menu").appendChild(br);
 
   }
@@ -392,7 +392,7 @@ function renderOtherContents(menu) {
   let menuDownloadUrl;
   if (!isLocal && localDataUsing) {
     menuDownloadUrl =
-      menu.download_url = `${url.origin}/${siteConfig.repositoryName}${menu.download_url}`;
+      menu.download_url = menu.download_url;
   } else {
     menuDownloadUrl = menu.download_url;
   }
