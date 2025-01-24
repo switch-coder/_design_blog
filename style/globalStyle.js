@@ -1,5 +1,5 @@
 // menu style
-const menuListStyle = `text-3xl leading-snug text-surface hover:text-graylv3 font-medium capitalize`;
+const menuListStyle = `text-3xl leading-snug mb-[-0.275rem] text-surface hover:text-graylv3 font-medium capitalize`;
 
 // mobile menu style
 const mobileMenuStyle = `m-0 block py-4 px-6`;
