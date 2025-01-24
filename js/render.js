@@ -74,7 +74,6 @@ async function renderMenu() {
     link.onclick = (event) => {
       // 메뉴 링크 클릭 시 이벤트 중지 후 menu 내용을 읽어와 contents 영역에 렌더링
       event.preventDefault();
-      console.log('renderMenu :>> ',menu);
       if (menu.type === "dir") {
         if (blogList.length === 0) {
           // 블로그 리스트 로딩
@@ -390,10 +389,8 @@ function renderOtherContents(menu) {
   // console.log(menu)
   // console.log(menu.download_url)
   let menuDownloadUrl;
-  console.log('url :>> ', url.origin);
-  if (!isLocal && localDataUsing) {
-    menuDownloadUrl =
-      menu.download_url =`${url.origin}/${siteConfig.repositoryName}${menu.download_url}`;
+  if (isLocal && localDataUsing) {
+    menuDownloadUrl =`${url.origin}/${siteConfig.repositoryName}${menu.download_url}`;
   } else {
     menuDownloadUrl = menu.download_url;
   }
