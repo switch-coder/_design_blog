@@ -3,22 +3,8 @@
 ###### NO.37 / 2025.01.15. 09:00•essay
 
 
-<iframe id="ucc-1" src="<https://youtube.googleapis.com/embed/?autohide=1&ps=docs&enablecastapi=0&hl=ko&partnerid=30&post_message_origin=https%3A%2F%2Fdrive.google.com&origin=https%3A%2F%2Fdrive.google.com&hbenv=apps-elements&enablejsapi=1>" frameborder="0" width="100%" height="100%" allow="autoplay" title="YouTube video player"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ifPvDAPI32Y" frameborder="0" allowfullscreen></iframe>
 
-
-
-```javascript
-<video autoplay="" loop="" muted=""  playsinline="" > 
-<source src="https://drive.google.com/uc?export=view&amp;id=1YlRvuHCk_Zp6TsPlkq6ESr6DNUaQHPV7" type="video/webm" >
-```
-
-
-
-<video autoplay="" loop="" muted=""  playsinline="" > 
-<source src="https://drive.google.com/uc?export=view&amp;id=1YlRvuHCk_Zp6TsPlkq6ESr6DNUaQHPV7" type="video/webm" >
-</video>
-
-출처: <https://b127.tistory.com/285> \[사행습인운:티스토리\]
 
 
 경험에 빗대어 좋은 퀄리티라고 느끼는 것은 보편적 우수함보다는 맥락적 적합성에 가깝다. 어쨋든 디자인이라는 것을 업으로 살아온 나로서는 퀄리티라는 것과의 씨름을 꽤 오랫동안 했다. 기업과 스타트업에서 10년 넘게 일을 하면서 퀄리티에 대해 나름의 기준으로 정리해봤다.
