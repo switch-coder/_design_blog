@@ -1,5 +1,12 @@
-# 고퀄에 대한 생각— About High Quality 
+# 고퀄에 대한 생각— About High Quality
+
 ###### NO.37 / 2025.01.15. 09:00•essay
+
+
+<iframe id="ucc-1" src="<https://youtube.googleapis.com/embed/?autohide=1&ps=docs&enablecastapi=0&hl=ko&partnerid=30&post_message_origin=https%3A%2F%2Fdrive.google.com&origin=https%3A%2F%2Fdrive.google.com&hbenv=apps-elements&enablejsapi=1>" frameborder="0" width="100%" height="100%" allow="autoplay" title="YouTube video player"></iframe>
+
+
+
 경험에 빗대어 좋은 퀄리티라고 느끼는 것은 보편적 우수함보다는 맥락적 적합성에 가깝다. 어쨋든 디자인이라는 것을 업으로 살아온 나로서는 퀄리티라는 것과의 씨름을 꽤 오랫동안 했다. 기업과 스타트업에서 10년 넘게 일을 하면서 퀄리티에 대해 나름의 기준으로 정리해봤다.
 <br>
 
@@ -9,23 +16,23 @@
 군더더기 없다는 것은 심플과는 조금 다르다. 필요한 것은 있되, 불필요한 것은 없는 것이 군더더기 없음이다. 5개 이내로 기능을 줄여야하는 느낌이기 보다는 100가지 기능을 가졌더라도 군더더기 없이 그것을 전달하는 것이다. 그리고 남기기로 한 것에 대해 상대적인 뛰어남을 가진다면 좋은 퀄리티의 제품이라고 할 수 있다. 시간의 흐름에 따라 필요한 것과 불필요한 것은 또 달라지지만 어쨌든 그렇다.
 <br>
 
-**두 번째, 가치 수명이 길다.** 
+**두 번째, 가치 수명이 길다.**
 흔히 우리는 어떤 트렌드에 벗어나서 시간에 관계 없이 가치를 주는 것을 소위 클래식이라고 부른다.
 
 실제로 완전히 영구적인 가치를 지닌 것이 있냐고 하면 솔직히 있는지 없는지 모르겠지만, 우리 삶이 100세라고 넉넉잡아 봤을 때 그 시간의 절반 정도만 지킬 수 있어도 썩 좋은 퀄리티의 클래식이라고 생각한다. 반짝하는 것을 만들어내기는 상대적으로 쉽다. 하지만 시간이 지나도 가치가 있는 것은 꽤 많은 고려가 필요하다. 당장 사람들이 알아주지 않는 것에도 나름의 신념을 가지고 신경 쓴 제품이라면 시간의 흐름에도 가치를 지키는데 도움을 준다.
 <br>
 
-<div class="slider h-[600px]">
+<div class="slider h-\[600px\]">
 
-![alt text](https://picsum.photos/id/1015/600/400)
+ ![alt text](https://picsum.photos/id/1015/600/400)
 
-![alt text](https://picsum.photos/id/1025/400/600)
+ ![alt text](https://picsum.photos/id/1025/400/600)
 
-![alt text](https://picsum.photos/id/1035/800/400)
+ ![alt text](https://picsum.photos/id/1035/800/400)
 
-![alt text](https://picsum.photos/id/1045/600/400)
+ ![alt text](https://picsum.photos/id/1045/600/400)
 
-![alt text](https://picsum.photos/id/1055/600/400)
+ ![alt text](https://picsum.photos/id/1055/600/400)
 
 </div>
 
@@ -35,26 +42,28 @@
 
 <div class="gallery4">
 
-![alt text](img/image.png)
+ ![alt text](img/image.png)
 
-![alt text](img/image.png)
+ ![alt text](img/image.png)
 
-![alt text](img/image.png)
+ ![alt text](img/image.png)
 
-![alt text](img/image.png)
+ ![alt text](img/image.png)
 
-![alt text](img/image.png)
+ ![alt text](img/image.png)
 
-![alt text](img/image.png)
+ ![alt text](img/image.png)
 
-![alt text](img/image.png)
+ ![alt text](img/image.png)
 
-![alt text](img/image.png)
+ ![alt text](img/image.png)
 </div>
 
 위 세 가지는 대체로 어떤 지점에서 완결성을 가지는 개념이기 보다는 지속적인 개선을 요구하는 것들이다. 어떤 좋은 퀄리티의 황금 공식 따위가 있으면 좋겠다만 좋은 퀄리티는 현재 보다 혹은 다른 것보다 ‘더 나음’을 요구한다. 그리고 그것은 마치 만렙에 다가가는 게임처럼 올라갈수록 더 많은 노력이 수반되어야한다. 대가들의 작업이 좋은 이유가 그것을 사랑하는 것이 느껴지는 것 때문인 것과 같이 좋은 퀄리티를 가진 제품은 그것을 만든이의 애정과 노고가 고스란히 담겨있고 느낄 수 있다.
 <br>
 
-![alt text](img/image.png)
-###### 비싸기는 하지만 Apple Studio Display는 색 정확도나 빌드퀄리티 면에서 만족을 주는 제품이다. iPhone, MacBook도 마찬가지다. 
+ ![alt text](img/image.png)
+
+###### 비싸기는 하지만 Apple Studio Display는 색 정확도나 빌드퀄리티 면에서 만족을 주는 제품이다. iPhone, MacBook도 마찬가지다.
+
 <br>
